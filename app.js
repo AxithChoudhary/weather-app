@@ -51,18 +51,4 @@ window.addEventListener('load',()=>{
             
 
     })
-    
-    // if(navigator.geolocation)
-    // {
-    //     navigator.geolocation.getCurrentPosition(position=>{
-    //         long=position.coords.longitude;
-    //         lat=position.coords.latitude;
-
-            
-    //         console.log(hello)
-    //     })
-    // }
-    // else{
-    //     h1.textContent="please allow location"
-    // }
 });
