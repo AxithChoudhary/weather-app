@@ -1,4 +1,4 @@
-window.addEventListener('load',()=>{
+window.addEventListener('load',async ()=>{
     let long;
     let lat;
     let tempratureDiscription=document.querySelector('.temprature-description')
@@ -12,7 +12,7 @@ window.addEventListener('load',()=>{
 
 
 
-    navigator.geolocation.getCurrentPosition(position=>{
+    await navigator.geolocation.getCurrentPosition( position=>{
         long=position.coords.longitude;
         lat=position.coords.latitude;
         // const proxy="https://cors-anywhere.herokuapp.com/"
