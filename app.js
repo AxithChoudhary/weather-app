@@ -12,11 +12,11 @@ window.addEventListener('load',async ()=>{
 
 
 
-    await navigator.geolocation.getCurrentPosition( position=>{
+    navigator.geolocation.getCurrentPosition( position=>{
         long=position.coords.longitude;
         lat=position.coords.latitude;
         // const proxy="https://cors-anywhere.herokuapp.com/"
-        const api=`http://api.weatherapi.com/v1/current.json?key=d4402f09c7fa4af28df93736222002&q=${lat},${long}&aqi=no`;
+        const api=await `http://api.weatherapi.com/v1/current.json?key=d4402f09c7fa4af28df93736222002&q=${lat},${long}&aqi=no`;
 
         console.log(position)
         fetch(api).then(response=>{
